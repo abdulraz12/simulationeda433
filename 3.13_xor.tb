@@ -1,0 +1,19 @@
+## DigiFlisp - Switchnet Tool, Version 3
+>NUM:0,TYPE:29,X=52,Y=52
+IV[0]x
+<
+>NUM:1,TYPE:29,X=52,Y=172
+IV[0]y
+<
+>NUM:2,TYPE:6,X=166,Y=111
+IV[0]x
+IV[1]y
+<
+>NUM:3,TYPE:6,X=304,Y=129
+IV[0]u2
+IV[1]z
+<
+>NUM:4,TYPE:29,X=46,Y=268
+IV[0]z
+<
+##<
