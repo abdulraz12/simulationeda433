@@ -1,0 +1,16 @@
+test_load.fmem
+
+#ClearAllMemory
+#ClearAllRegisters
+
+#SetMemory 20=F0
+#SetMemory 21=44
+#SetMemory 22=94
+#SetMemory 23=01
+#SetMemory 24=E1
+#SetMemory 25=05
+#SetMemory 26=21
+#SetMemory 27=FA
+#SetRegister A=7F
+
+#SetMemory FF=20
