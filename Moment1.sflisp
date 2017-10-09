@@ -1,0 +1,4 @@
+	org 	$20
+start: 	lda 	$FC
+	STA	$FB
+	JMP	start

@@ -1,0 +1,17 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: Stegmotor4a.lst
+FB                      1. Engine		equ	$fb
+                        2. 
+20                      3. 		org	$20
+20 F0 06                4. Start		lda	#$06
+22 E1 FB                5. 		sta	Engine
+24 F0 0A                6. 		lda	#$0A
+26 E1 FB                7. 		sta	Engine
+28 F0 09                8. 		lda	#$09
+2A E1 FB                9. 		sta	Engine
+2C F0 05               10. 		lda	#$05
+2E E1 FB               11. 		sta	Engine
+30 21 EE               12. 		bra	Start

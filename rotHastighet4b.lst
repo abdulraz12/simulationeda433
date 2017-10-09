@@ -1,0 +1,43 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: rotHastighet4b.lst
+FB                      1. Outport:	EQU	$FB
+FC                      2. Inport:		EQU	$FC
+70                      3. StateIndex	EQU	$70
+                        4. 
+20                      5. 		org	$20
+20 92 10                6. 		ldsp	#$10
+22 F0 00                7. 		lda	#$00
+24 E1 70                8. 		sta	StateIndex
+26 90 80                9. 		ldx	#StateVector
+28 34 33               10. Start:		jsr	Delay
+2A F1 70               11. 		lda	StateIndex
+2C F4                  12. 		lda	A,X
+2D E1 FB               13. 		sta	Outport
+2F 34 3E               14. 		jsr	NextState
+31 21 F5               15. 		bra	Start
+                       16. 
+33 10                  17. Delay:		psha
+34 13                  18. 		pshc
+35 F1 FC               19. 		lda	Inport
+37 08                  20. Decrease:	deca
+38 09                  21. 		tsta
+39 25 FC               22. 		bne	Decrease
+3B 17                  23. 		pulc
+3C 14                  24. 		pula
+3D 43                  25. 		rts
+                       26. 
+3E 10                  27. NextState:	psha
+3F 13                  28. 		pshc
+40 F1 70               29. 		lda	StateIndex
+42 07                  30. 		inca
+43 99 03               31. 		anda	#$03
+45 E1 70               32. 		sta	StateIndex
+47 17                  33. 		pulc
+48 14                  34. 		pula
+49 43                  35. 		rts
+                       36. 
+80                     37. 		org	$80
+80 06 0A 09 05         38. StateVector	FCB	$06,$0A,$09,$05

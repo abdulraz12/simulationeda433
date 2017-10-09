@@ -1,0 +1,20 @@
+LED:		EQU	$FB
+
+		org	$20
+		ldsp	$10
+		tsta
+InitRunDiode:	lda	#1
+RunDiode_1:	sta	LED
+		rola
+		jsr	Delay
+		Jmp	RunDiode_1
+
+Delay:		psha
+		pshc
+		lda	#$20
+Decrease:	deca
+		tsta
+		bne Decrease
+		pulc
+		pula
+		rts
