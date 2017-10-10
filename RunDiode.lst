@@ -19,7 +19,7 @@ FB                      1. LED:		EQU	$FB
 2E F0 20               14. 		lda	#$20
 30 08                  15. Decrease:	deca
 31 09                  16. 		tsta
-32 25 FC               17. 		bne Decrease
+32 25 FC               17. 		bne	Decrease
 34 17                  18. 		pulc
 35 14                  19. 		pula
 36 43                  20. 		rts
