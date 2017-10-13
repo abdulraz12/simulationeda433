@@ -2,6 +2,10 @@ Outport:	EQU	$FB
 Inport:		EQU	$FC
 StateIndex	EQU	$70
 
+
+		org	$ff
+		fcb	$20
+
 		org	$20
 		ldsp	#$10
 		lda	#$00

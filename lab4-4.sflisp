@@ -16,7 +16,7 @@ Main:
 	LSLA
 	PSHA
 	;LDX	#MorseCode
-	LDX	#$D0
+	LDX	#$B0
 	LDA	A,X
 	STA	Count
 	PULA

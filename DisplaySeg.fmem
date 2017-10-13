@@ -4,6 +4,7 @@ File: DisplaySeg.fmem
 
  # ClearAllMemory
  # ClearAllRegisters
+ #setMemory  FF=20
  #setMemory  20=90
  #setMemory  21=70
  #setMemory  22=F1

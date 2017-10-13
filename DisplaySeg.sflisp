@@ -2,6 +2,9 @@ DIPSWITCH:	EQU	$FC
 SEGMENT7:	EQU	$FB
 SegError:	EQU	$79
 		
+		org	$FF
+		fcb	$20
+
 		org	$20
 		ldx	#Segmentkod
 DisplaySeg_1:	lda	DIPSWITCH

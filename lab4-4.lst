@@ -21,7 +21,7 @@ FF 20                   7. 	FCB	$20
 28 0B                  16. 	LSLA
 29 10                  17. 	PSHA
 2A                     18. 	;LDX	#MorseCode
-2A 90 D0               19. 	LDX	#$D0
+2A 90 B0               19. 	LDX	#$B0
 2C F4                  20. 	LDA	A,X
 2D E1 7D               21. 	STA	Count
 2F 14                  22. 	PULA

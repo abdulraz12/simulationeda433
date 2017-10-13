@@ -1,5 +1,7 @@
 LED:		EQU	$FB
 
+		org	$ff
+		fcb	$20
 		org	$20
 		ldsp	$10
 		tsta
@@ -11,7 +13,7 @@ RunDiode_1:	sta	LED
 
 Delay:		psha
 		pshc
-		lda	#$20
+		lda	#$10
 Decrease:	deca
 		tsta
 		bne	Decrease

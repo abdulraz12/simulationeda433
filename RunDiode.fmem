@@ -4,6 +4,7 @@ File: RunDiode.fmem
 
  # ClearAllMemory
  # ClearAllRegisters
+ #setMemory  FF=20
  #setMemory  20=A2
  #setMemory  21=10
  #setMemory  22=09
@@ -19,7 +20,7 @@ File: RunDiode.fmem
  #setMemory  2C=10
  #setMemory  2D=13
  #setMemory  2E=F0
- #setMemory  2F=20
+ #setMemory  2F=10
  #setMemory  30=08
  #setMemory  31=09
  #setMemory  32=25
