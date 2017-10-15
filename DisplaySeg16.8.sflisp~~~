@@ -1,0 +1,18 @@
+DIPSWITCH:	EQU	$FC
+SEGMENT7:	EQU	$FB
+SegError:	EQU	$79
+		
+		org	$20
+		ldx	#Segmentkod
+DisplaySeg_1:	lda	DIPSWITCH
+		cmpa	#10
+Comparison	bcs	Allowed
+		lda	#SegError
+		sta 	SEGMENT7
+		bra	DisplaySeg_1
+Allowed:	lda	A,X
+		sta	SEGMENT7
+		bra	DisplaySeg_1
+
+		org	$70
+Segmentkod:	FCB	$3F,$06,$5B,$4F,$66,$6D,$7D,$07,$7F,$67
