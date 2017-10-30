@@ -1,0 +1,26 @@
+QAflisp - FLISP Absolute crossassembler, Version 1.0
+(c) GMV 1989-2015
+
+
+File: exTenta2.lst
+                        1. 
+FB                      2. Utport	equ	$FB
+FD                      3. 	org	$FD
+"C:/Users/Jerge/Documents/GitHub/simulationeda433/exTenta2.sflisp" line 4, ERROR: Undefined symbol 'IrqRut'
+FD 00 00 20             4. 	fcb	IrqRut,0,init
+20                      5. 	org	$20
+20 92 20                6. init:	ldsp	#$20
+22 F0 01                7. 	lda	#1
+"C:/Users/Jerge/Documents/GitHub/simulationeda433/exTenta2.sflisp" line 8, ERROR: Undefined symbol 'Tavlor'
+24 E1 00                8. 	sta	Tavlor
+"C:/Users/Jerge/Documents/GitHub/simulationeda433/exTenta2.sflisp" line 9, ERROR: Undefined symbol 'SuddaAlla'
+26 20 D8                9. 	bsr	SuddaAlla
+28 01 00               10. 	andcc	#0
+"C:/Users/Jerge/Documents/GitHub/simulationeda433/exTenta2.sflisp" line 11, ERROR: Undefined symbol 'Tavlor'
+2A A0 00               11. main:	ldx	Tavlor
+"C:/Users/Jerge/Documents/GitHub/simulationeda433/exTenta2.sflisp" line 12, ERROR: Undefined symbol 'SegCode'
+2C F3 00               12. 	lda	SegCode,X
+2E E1 FB               13. 	sta	Utport
+30 21 F8               14. 	bra	main
+
+****** Total Errors: 5
